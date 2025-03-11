@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "f8671e1e-45cf-40e1-85c1-96106a9e225f",
+		"name": "NodeJS School API",
+		"description": "StartFragmentThis collection contains API endpoints for managing schools, including adding new schools and retrieving a list sorted by proximity.EndFragment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37888869"
+	},
+	"item": [
+		{
+			"name": "Add School",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Test School\",\r\n    \"address\": \"123 Main St\",\r\n    \"latitude\": 37.7749,\r\n    \"longitude\": -122.4194\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://nodejs-school-api.onrender.com/api/addSchool",
+					"protocol": "https",
+					"host": [
+						"nodejs-school-api",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"addSchool"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Schools",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://nodejs-school-api.onrender.com/api/listSchools?latitude=37.7749&longitude=-122.4194",
+					"protocol": "https",
+					"host": [
+						"nodejs-school-api",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"listSchools"
+					],
+					"query": [
+						{
+							"key": "latitude",
+							"value": "37.7749"
+						},
+						{
+							"key": "longitude",
+							"value": "-122.4194"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
